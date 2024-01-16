@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import ChipComponent from "./ChipComponent";
 
-function App() {
+const App = () => {
+  const handleSelectedTags = (tags) => {
+    console.log(tags);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="flex-row justify-center items-center">
+        <h2 className="text-center"> Pick Users </h2>
+        <ChipComponent selectedTags={handleSelectedTags} />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
