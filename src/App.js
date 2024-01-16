@@ -1,17 +1,11 @@
-import logo from "./logo.svg";
-import "./App.css";
-import ChipComponent from "./ChipComponent";
+import TagComponent from "./components/TagComponent";
 
 const App = () => {
-  const handleSelectedTags = (tags) => {
-    console.log(tags);
-  };
-
   return (
-    <div>
-      <div className="flex-row justify-center items-center">
-        <h2 className="text-center"> Pick Users </h2>
-        <ChipComponent selectedTags={handleSelectedTags} />
+    <div className="bg-slate-100 w-full h-[100vh]">
+      <div className="flex-row justify-center items-center ">
+        <h2 className="text-center text-3xl font-bold"> Pick Users </h2>
+        <TagComponent />
       </div>
     </div>
   );
